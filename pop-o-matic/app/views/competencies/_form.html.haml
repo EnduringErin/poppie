@@ -1,0 +1,18 @@
+= form_for :competency, url: competencies_path do |f|
+	%p Voor welke competentie wil je EC's opnemen? 
+	%p
+		= f.label "Competentie:"
+		= f.select(:competency, options_for_select([['Research & Innovation', 'Research'], ['Concepting', 'Concepting'], ['Multimedia Design', 'Design'], ['Multimedia Production', 'Production'], ['Quality Monitoring & Implementation', 'QMI'], ['Multidisciplinary Teamwork', 'Teamwork'], ['Communication', 'Communication'], ['Projectmanagement', 'PM'], ['Sharing', 'Sharing'], ['Growth & Reflection', 'G&R']]))
+
+	%p Hoeveel EC's wil je voor deze competentie opnemen?
+	%p
+		= f.label "Aantal EC's:"
+		= f.select(:european_credit, options_for_select([['3', '3'], ['6', '6'], ['9', '9'], ['12', '12']]))
+
+	%p Op welk niveau wil je deze EC's behalen?
+	%p
+		= f.label "Niveau:"
+		= f.select(:level, options_for_select([['Basis', 'Basis'], ['Gevorderd', 'Gevorder'], ['Expert', 'Expert']]))
+
+	%p
+		= f.submit "Opslaan",class: "btn btn-success"

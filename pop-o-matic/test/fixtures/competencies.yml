@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  competency: MyString
+  european_credit: MyString
+  level: 1
+
+two:
+  competency: MyString
+  european_credit: MyString
+  level: 1
