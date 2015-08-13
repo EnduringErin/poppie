@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811221924) do
+ActiveRecord::Schema.define(version: 20150811230338) do
 
   create_table "competencies", force: :cascade do |t|
     t.string   "competency"
-    t.string   "european_credit"
-    t.integer  "level"
+    t.integer  "european_credit"
+    t.string   "level"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

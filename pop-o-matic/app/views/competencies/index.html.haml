@@ -7,4 +7,17 @@
 
 		%h3 Competenties
 
+		%table.table
+			%tr
+				%th Competenties
+				%th Aantal EC's
+				%th Niveau
+			-@competencies.each do |competency|
+				%tr
+					%td=competency.competency
+					%td=competency.european_credit
+					%td=competency.level
+					%td=link_to "Bewerken", edit_competency_path(competency), class: "btn btn-warning"
+					%td=link_to "Verwijderen", competency_path(competency), method: :delete, data: {confirm: "Weet je het zeker?"}, class: "btn btn-danger"
+
 		=link_to "Nieuwe competentie toevoegen", new_competency_path, class: "btn btn-success"
