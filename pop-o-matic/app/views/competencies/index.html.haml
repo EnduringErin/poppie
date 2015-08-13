@@ -5,7 +5,7 @@
 	%main
 		%h3 Mijn Persoonlijke Ontwikkelings Plan voor ...
 
-		%h3 Competenties
+		%h3 Competentiematrix
 
 		%table.table
 			%tr
@@ -17,6 +17,7 @@
 					%td=competency.competency
 					%td=competency.european_credit
 					%td=competency.level
+					%td=link_to "Leerdoelen, activiteiten en resultaten", competency_path(competency), class: "btn btn-info"
 					%td=link_to "Bewerken", edit_competency_path(competency), class: "btn btn-warning"
 					%td=link_to "Verwijderen", competency_path(competency), method: :delete, data: {confirm: "Weet je het zeker?"}, class: "btn btn-danger"
 
